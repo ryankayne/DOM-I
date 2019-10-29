@@ -100,33 +100,55 @@ midText[4].textContent = siteContent ['main-content']['vision-content']
 // end mid section
 
 //contact
-let contactInfo = document.querySelectorAll('contact');
-contactInfo[0].textContent = siteContent ['contact']['contact-h4']
 
-contactInfo[1].textContent = siteContent ['contact']['address']
+let contactInfo = document.querySelector('.contact');
+let contactTitle = contactInfo.querySelector('h4:nth-child(1)').textContent = siteContent['contact']['contact-h4'];
 
-contactInfo[2].textContent = siteContent ['contact']['phone']
 
-contactInfo[3].textContent = siteContent ['contact']['email']
+let contactAddress = document.querySelector('.contact p:nth-child(2)');
+contactAddress.innerHTML = siteContent['contact']['address'];
+// .replace(/ /g, '<br>')
 
-// "contact": {
-//   "contact-h4" : "Contact",
-//   "address" : "123 Way 456 Street Somewhere, USA",
-//   "phone" : "1 (888) 888-8888",
-//   "email" : "sales@greatidea.io",
+let contactPhone = document.querySelector('.contact p:nth-child(3)');
+contactPhone.textContent = siteContent['contact']['phone'];
 
-newNavItem1.textContent = "FAQ";
+let contactEmail = document.querySelector('.contact p:nth-child(4)');
+contactEmail.textContent = siteContent['contact']['email'];
 
-const fifthNav = document.querySelector('nav');
-fifthNav.prepend(newNavItem1);
+// let contactP = document.getElementsByTagName('p');
+// contactInfo[0].textContent = siteContent['contact']['address']
+// let contactAddress = contactInfo.querySelector('p:nth-child(1)').textContent = siteContent['contact']['address'];
 
-newNavItem2.textContent = "Complain";
+// contactInfo.querySelector('h4:nth-child(1)').textContent = siteContent['contact']['contact-h4'];
 
-const sixthNav = document.querySelector('nav');
-sixthNav.prepend(newNavItem2);
+// contactInfo.querySelector('h4:nth-child(1)').textContent = siteContent['contact']['contact-h4'];
+
+// contactInfo[0].textContent = siteContent ['contact']['contact-h4']
+
+// contactInfo[1].textContent = siteContent ['contact']['address']
+
+// contactInfo[2].textContent = siteContent ['contact']['phone']
+
+// contactInfo[3].textContent = siteContent ['contact']['email']
+
+// newNavItem1.textContent = "FAQ";
+
+// const fifthNav = document.querySelector('nav');
+// fifthNav.prepend(newNavItem1);
+
+// newNavItem2.textContent = "Complain";
+
+// const sixthNav = document.querySelector('nav');
+// sixthNav.appendChild(newNavItem2);
 
 
 // newContent.textContent = "Ugly website design by Christina Gorton 🙈";
 // const secondaryContent = document.querySelector('body');
 
 // secondaryContent.prepend(newContent);
+
+// footer
+// let footerText = document.getElementsByTagName('footer');
+// footerText[0].textContent = siteContent['footer']['copyright']
+
+document.querySelector('footer').textContent = "Copyright Great Idea! 2018"
