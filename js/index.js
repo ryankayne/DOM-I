@@ -106,7 +106,7 @@ let contactTitle = contactInfo.querySelector('h4:nth-child(1)').textContent = si
 
 
 let contactAddress = document.querySelector('.contact p:nth-child(2)');
-contactAddress.innerHTML = siteContent['contact']['address'];
+contactAddress.innerHTML = '<p>123 Way 456 Street <br> Somewhere, USA</p>';
 // .replace(/ /g, '<br>')
 
 let contactPhone = document.querySelector('.contact p:nth-child(3)');
@@ -133,7 +133,21 @@ contactEmail.textContent = siteContent['contact']['email'];
 
 // newNavItem1.textContent = "FAQ";
 
-// const fifthNav = document.querySelector('nav');
+const fifthNav = document.createElement('a');
+
+fifthNav.textContent = 'FAQ';
+
+const secondVar = document.querySelector('nav');
+
+secondVar.prepend(fifthNav);
+
+// const fifthNav = document.createElement('a');
+// const newNav1 = document.createTextNode('FAQ');
+
+// fifthNav.appendChild(newNav1)
+
+// const addNav = document.querySelectorAll('.container nav')[0]
+// addNav.insertBefore(fifthNav, addNav.childNodes[0]);
 // fifthNav.prepend(newNavItem1);
 
 // newNavItem2.textContent = "Complain";
