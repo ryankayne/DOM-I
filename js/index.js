@@ -96,3 +96,37 @@ midText[2].textContent = siteContent ['main-content']['services-content']
 midText[3].textContent = siteContent ['main-content']['product-content']
 
 midText[4].textContent = siteContent ['main-content']['vision-content']
+
+// end mid section
+
+//contact
+let contactInfo = document.querySelectorAll('contact');
+contactInfo[0].textContent = siteContent ['contact']['contact-h4']
+
+contactInfo[1].textContent = siteContent ['contact']['address']
+
+contactInfo[2].textContent = siteContent ['contact']['phone']
+
+contactInfo[3].textContent = siteContent ['contact']['email']
+
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io",
+
+newNavItem1.textContent = "FAQ";
+
+const fifthNav = document.querySelector('nav');
+fifthNav.prepend(newNavItem1);
+
+newNavItem2.textContent = "Complain";
+
+const sixthNav = document.querySelector('nav');
+sixthNav.prepend(newNavItem2);
+
+
+// newContent.textContent = "Ugly website design by Christina Gorton 🙈";
+// const secondaryContent = document.querySelector('body');
+
+// secondaryContent.prepend(newContent);
