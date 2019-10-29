@@ -40,3 +40,59 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"] ["img-src"])
+
+let mid = document.getElementById("middle-img");
+mid.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+// Nav items
+let navA = document.querySelectorAll("a");
+navA[0].textContent = siteContent['nav']["nav-item-1"];
+
+navA[1].textContent = siteContent['nav']["nav-item-2"];
+
+navA[2].textContent = siteContent['nav']["nav-item-3"];
+
+navA[3].textContent = siteContent['nav']["nav-item-4"];
+
+navA[4].textContent = siteContent['nav']["nav-item-5"];
+
+navA[5].textContent = siteContent['nav']["nav-item-6"];
+
+navA.forEach( element => {
+  element.style.color = "green"; 
+});
+//end nav
+
+// main header
+let mainTitle = document.querySelector('.cta h1');
+mainTitle.innerHTML = siteContent ["cta"]["h1"].replace(/ /g, '<br>')
+
+document.querySelector('button').textContent = "Get Started"
+
+//mid section
+
+let midHeaders = document.getElementsByTagName('h4');
+midHeaders[0].textContent = siteContent['main-content']['features-h4']
+
+midHeaders[1].textContent = siteContent['main-content']['about-h4']
+
+midHeaders[2].textContent = siteContent['main-content']['services-h4']
+
+midHeaders[3].textContent = siteContent['main-content']['product-h4']
+
+midHeaders[4].textContent = siteContent['main-content']['vision-h4']
+
+let midText = document.getElementsByTagName('p');
+midText[0].textContent = siteContent ['main-content']['features-content']
+
+midText[1].textContent = siteContent ['main-content']['about-content']
+
+midText[2].textContent = siteContent ['main-content']['services-content']
+
+midText[3].textContent = siteContent ['main-content']['product-content']
+
+midText[4].textContent = siteContent ['main-content']['vision-content']
